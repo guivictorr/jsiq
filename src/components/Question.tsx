@@ -7,9 +7,10 @@ import MDXComponents from 'components/mdComponents';
 import { Sidebar } from 'components/Sidebar/Sidebar';
 import { PrevNextNav } from 'components/PrevNextNav';
 import { Footer } from 'components/Footer';
+import { MdxRemote } from 'next-mdx-remote/types';
 
 interface Props {
-  source: string;
+  source: MdxRemote.Source;
   frontMatter: FrontMatter;
   pagesMeta: PageMeta[];
   nextLink: NextLink;
@@ -25,6 +26,10 @@ export default function Question({
   pagesMeta,
   url,
 }: Props) {
+
+  console.log({source});
+  
+
   const content = hydrate(source, { components: MDXComponents });
 
   return (
