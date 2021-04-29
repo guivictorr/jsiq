@@ -1,4 +1,4 @@
-import { Text, VStack, Heading, Flex, Center, Wrap, WrapItem } from '@chakra-ui/react';
+import { Text, VStack, Heading, Center, Wrap, WrapItem } from '@chakra-ui/react';
 import { PageLayout } from 'components/PageLayout';
 import { IconCard } from 'components/Card/IconCard';
 import { questionsRoutes } from 'config/routes';

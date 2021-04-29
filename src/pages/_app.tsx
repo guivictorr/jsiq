@@ -7,8 +7,6 @@ import 'styles/globals.css';
 import SEO from '../config/next-seo.config';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // useGoogleAnalytics();
-
   return (
     <>
       <DefaultSeo {...SEO} />
