@@ -26,10 +26,6 @@ export default function Question({
   pagesMeta,
   url,
 }: Props) {
-
-  console.log({source});
-  
-
   const content = hydrate(source, { components: MDXComponents });
 
   return (
