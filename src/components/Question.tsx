@@ -1,16 +1,15 @@
 import { NextSeo } from 'next-seo';
-import hydrate from 'next-mdx-remote/hydrate';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { PageLayout } from 'components/PageLayout';
 import { FrontMatter, NextLink, PageMeta, PrevLink } from 'utils/getQuestions';
-
 import MDXComponents from 'components/mdComponents';
 import { Sidebar } from 'components/Sidebar/Sidebar';
 import { PrevNextNav } from 'components/PrevNextNav';
 import { Footer } from 'components/Footer';
-import { MdxRemote } from 'next-mdx-remote/types';
+
 
 interface Props {
-  source: MdxRemote.Source;
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
   frontMatter: FrontMatter;
   pagesMeta: PageMeta[];
   nextLink: NextLink;
@@ -26,7 +25,7 @@ export default function Question({
   pagesMeta,
   url,
 }: Props) {
-  const content = hydrate(source, { components: MDXComponents });
+
 
   return (
     <>
@@ -57,7 +56,7 @@ export default function Question({
         pagesMeta={pagesMeta}
         title={frontMatter.title}
       >
-        {content}
+        <MDXRemote {...source} components={MDXComponents} />
       </PageLayout>
     </>
   );

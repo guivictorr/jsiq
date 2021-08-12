@@ -1,8 +1,7 @@
 import { FrontMatter, getAllQuestionsMeta, getQuestionBySlug } from 'utils/getQuestions';
 import { GetStaticProps } from 'next';
-import renderToString from 'next-mdx-remote/render-to-string';
+import { serialize } from 'next-mdx-remote/serialize'
 
-import MDXComponents from 'components/mdComponents';
 import Question from 'components/Question';
 import { BASE_URL } from 'config/links';
 
@@ -16,10 +15,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const scope: { [key: string]: any } = data;
 
-  const mdxSource = await renderToString(content, {
-    components: MDXComponents,
-    scope,
-  });
+  const mdxSource = await serialize(content, {scope})
+
 
   const url = `${BASE_URL}questions/javascript/${data.slug}`;
 
