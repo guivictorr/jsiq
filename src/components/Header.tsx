@@ -20,7 +20,6 @@ import { AnimatePresence, useViewportScroll, motion } from 'framer-motion';
 import NextLink from 'next/link';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { siteConfig, route } from 'config';
-import { ColorModeSwitcher } from 'components/ColorModeSwitcher';
 import NavLink from './NavLink';
 import { useRouter } from 'next/router';
 import { PageMeta } from 'utils/getQuestions';

@@ -3,8 +3,7 @@
   "extends": [
     "react-app",
     "plugin:prettier/recommended",
-    "prettier",
-    "prettier/react"
+    "prettier"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "warn",

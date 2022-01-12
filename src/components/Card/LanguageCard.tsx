@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Box, Text, useColorModeValue } from '@chakra-ui/react';
 import Image from 'next/image';
 import { QuestionType } from 'utils/getQuestions';

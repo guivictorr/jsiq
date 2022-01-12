@@ -1,12 +1,11 @@
 import { NextSeo } from 'next-seo';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { PageLayout } from 'components/PageLayout';
 import { FrontMatter, NextLink, PageMeta, PrevLink } from 'utils/getQuestions';
 import MDXComponents from 'components/mdComponents';
 import { Sidebar } from 'components/Sidebar/Sidebar';
 import { PrevNextNav } from 'components/PrevNextNav';
 import { Footer } from 'components/Footer';
-
 
 interface Props {
   source: MDXRemoteSerializeResult<Record<string, unknown>>;
@@ -25,8 +24,6 @@ export default function Question({
   pagesMeta,
   url,
 }: Props) {
-
-
   return (
     <>
       <NextSeo
