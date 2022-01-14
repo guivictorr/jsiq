@@ -29,6 +29,8 @@ const PrevLinkButton = React.forwardRef(({ onClick, href, disabled }: any, ref: 
   );
 });
 
+PrevLinkButton.displayName = 'PrevLinkButton';
+
 const NextLinkButton = React.forwardRef(({ onClick, href, disabled }: any, ref: any) => {
   return (
     <chakra.a
@@ -48,6 +50,8 @@ const NextLinkButton = React.forwardRef(({ onClick, href, disabled }: any, ref: 
     </chakra.a>
   );
 });
+
+NextLinkButton.displayName = 'NextLinkButton';
 
 export const PrevNextNav = ({ prevLink, nextLink }: Props) => {
   return (

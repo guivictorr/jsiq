@@ -53,6 +53,8 @@ const MobileNavButton = React.forwardRef((props: IconButtonProps, ref: React.Ref
   );
 });
 
+MobileNavButton.displayName = 'MobileNavButton';
+
 function MobileNavLink({ href, children }) {
   const { pathname } = useRouter();
 
